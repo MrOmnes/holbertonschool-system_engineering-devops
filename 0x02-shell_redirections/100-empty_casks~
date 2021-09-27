@@ -1,2 +1,2 @@
 #!/bin/bash
-find -empty -1a
+find -empty -a ./*
