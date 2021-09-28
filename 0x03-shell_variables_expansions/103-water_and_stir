@@ -1,0 +1,3 @@
+#!/bin/ban
+echo "$((echo $WATER | tr 'water' '0-4') + (echo $STIR | tr 'stir.' '0-4')) tr '0-7' 'bhelnort'
+ 
