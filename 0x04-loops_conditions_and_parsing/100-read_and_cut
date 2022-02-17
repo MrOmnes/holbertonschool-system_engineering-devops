@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 # This script display BestSchool 10 times
 i=$(wc -l /etc/passwd | cut -d' ' -f1)
+file=/etc/passwd
 c=1
-while ((read(/etc/passwd) != 0))
+while ((c != i))
 do
-	echo $(awk NR==$c $file | cut -d':' -f1,3,6)
-	c=$(c+1)
+	content=$(awk NR==$c $file | cut -d':' -f1,3,6)
+	c=$((c+1))
+	echo "$content"
 done
