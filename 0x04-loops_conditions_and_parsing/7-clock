@@ -1,18 +1,22 @@
 #!/usr/bin/env bash
 # This script display BestSchool 10 times
-hours=-1
+hours=0
 minutes=60
-while (( hours != 12 ))
+while (( hours < 13 ))
 do
-	if (( minutes == 60))
+	if (( minutes < 60 && hours <= 12))
 	then
 		hours=$((hours+1))
 		minutes=1
 		echo "Hour: $hours"
 	fi
-	if ((minutes  != 60 && hours != 12))
+	if ((minutes  < 60 && hours <= 12))
 	then
 		echo $minutes
 		minutes=$((minutes+1))
+	fi
+	if ((minutes == 59 && hours == 12))
+	then
+		hours=14
 	fi
 done
