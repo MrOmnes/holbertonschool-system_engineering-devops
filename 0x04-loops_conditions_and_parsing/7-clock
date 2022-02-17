@@ -2,21 +2,14 @@
 # This script display BestSchool 10 times
 hours=0
 minutes=60
-while (( hours < 13 ))
+while (( hours <= 12 ))
 do
-	if (( minutes < 60 && hours <= 12))
-	then
-		hours=$((hours+1))
-		minutes=1
-		echo "Hour: $hours"
-	fi
-	if ((minutes  < 60 && hours <= 12))
-	then
-		echo $minutes
+	echo "Hours: $hours"
+	while ((minutes <= 59))
+	do
+		echo "$minutes"
 		minutes=$((minutes+1))
-	fi
-	if ((minutes == 59 && hours == 12))
-	then
-		hours=14
-	fi
+	done
+	hours=$((hours+1))
+	minutes=0
 done
