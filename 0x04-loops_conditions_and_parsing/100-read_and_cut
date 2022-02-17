@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This script display BestSchool 10 times
+cat $'/etc/passwd' | cut -d ':' -f1,3,6

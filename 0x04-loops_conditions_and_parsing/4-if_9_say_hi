@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# This script display BestSchool 10 times
+i=0
+while (( i != 10 ))
+do
+	if (( i == 8))
+	then
+		echo "Hi"
+	fi
+	if (( i != 8))
+	then
+		echo "BestSchool"
+	fi
+	i=$((i+1))
+done
