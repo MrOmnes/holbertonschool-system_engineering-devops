@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 # This script display BestSchool 10 times
 i=0
-while (( i != 10 ))
+while (( i != 11 ))
 do
-	if (( i == 8))
+	if (( i == 9))
 	then
 		echo "Hi"
 	fi
-	if (( i != 8))
+	if (( i != 9))
 	then
 		echo "Best School"
 	fi
