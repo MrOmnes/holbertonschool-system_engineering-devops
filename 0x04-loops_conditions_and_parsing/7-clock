@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script display BestSchool 10 times
 hours=0
-minutes=0
+minutes=1
 while (( hours <= 12 ))
 do
 	echo "Hour: $hours"
@@ -11,5 +11,5 @@ do
 		minutes=$((minutes+1))
 	done
 	hours=$((hours+1))
-	minutes=0
+	minutes=1
 done
