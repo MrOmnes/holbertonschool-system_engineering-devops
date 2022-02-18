@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This is a useless comment
+# shellcheck disable=SC2009
+ps axuf | grep -i bash
