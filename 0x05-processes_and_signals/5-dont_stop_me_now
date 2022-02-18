@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This is a useless comment
+MYPID=$( ps faux | grep '4-to_infinity_and_beyond' | grep -vw grep | awk '{ print $2 }' );
+kill -9 ${MYPID};
