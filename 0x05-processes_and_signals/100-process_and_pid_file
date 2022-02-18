@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # This is a useless comment
-sudo chmod -R 777 /var/run | echo $$ > /var/run/myscript.pid
+echo $$ > /var/run/myscript.pid
 trap 'sudo rm /var/run/myscript.pid | kill "$$"' SIGQUIT
 trap "echo I hate the kill command | sudo rm /var/run/myscript.pid" SIGTERM
 trap "echo Y U no love me?! " SIGINT
