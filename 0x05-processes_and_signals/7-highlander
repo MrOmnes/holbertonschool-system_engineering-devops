@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This is a useless comment
+trap 'echo I am invincible!!!' SIGINT
+time=2
+while ((time % 2 == 0))
+do
+	echo "To infinity and beyond"
+	sleep $time
+done
