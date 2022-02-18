@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 # This is a useless comment
-i=1
 time=0
-while (i=1)
+while ((time % 2 == 0))
 do
 	echo "To infinity and beyond"
 	time=$((time+2))
