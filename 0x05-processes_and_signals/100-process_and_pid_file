@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # This is a useless comment
-echo $$ > /var/run/myscript.pid
-trap 'sudo rm /var/run/myscript.pid | kill "$$"' 3
-trap "echo I hate the kill command | sudo rm /var/run/myscript.pid" 15
-trap "echo Y U no love me?! " 2
+sudo chmod -R 777 /var/run | echo $$ > /var/run/myscript.pid
+trap 'sudo rm /var/run/myscript.pid | kill "$$"' SIGQUIT
+trap "echo I hate the kill command | sudo rm /var/run/myscript.pid" SIGTERM
+trap "echo Y U no love me?! " SIGINT
 time=2
 while ((time % 2 == 0))
 do
