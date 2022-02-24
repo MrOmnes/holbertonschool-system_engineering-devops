@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Add Facebook, RM old localhost and add new localhost
+sudo sed -i.bkp "$ a 8.8.8.8 facebook.com" /etc/hosts
+sudo sed 1d /etc/hosts -i
+sudo sed -i.bkp "$ a 127.0.0.2 localhost" /etc/hosts
