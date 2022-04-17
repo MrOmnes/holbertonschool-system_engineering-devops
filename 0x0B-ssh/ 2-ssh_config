@@ -3,5 +3,6 @@
 
 Host 34.139.53.21
   User ubuntu
-  IdentifyFile ~/.ssh/school
+  IdentityFile ~/.ssh/school
+  IdentitiesOnly yes
   PasswordAuthentication no
