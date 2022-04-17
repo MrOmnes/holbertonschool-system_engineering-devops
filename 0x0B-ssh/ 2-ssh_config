@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+# Ssh file confing
+
 Host 34.139.53.21
   User ubuntu
   IdentifyFile ~/.ssh/school
