@@ -1,0 +1,4 @@
+Host 34.139.53.21
+  User ubuntu
+  IdentifyFile ~/.ssh/school
+  PasswordAuthentication no
