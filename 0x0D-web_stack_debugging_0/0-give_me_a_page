@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Docker For Port 80
 
-sudo service apache2 restart
+sudo service apache2 start
