@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Docker For Port 80
+
+source /etc/apache2/envvars 
+apache2 -V
+sudo service apache2 restart
