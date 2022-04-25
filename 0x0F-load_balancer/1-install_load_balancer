@@ -11,10 +11,6 @@ echo "frontend Local_Server
 backend My_Web_Servers
     mode http
     balance roundrobin
-    option forwardfor
-    http-request set-header X-Forwarded-Port %[dst_port]
-    http-request add-header X-Forwarded-Proto https if { ssl_fc }
-    option httpchk HEAD / HTTP/1.1rnHost:localhost
-    server web1 34.148.177.223:80
-    server web2 34.139.245.214:80" >> /etc/haproxy/haproxy.cfg;
+    server web1 34.148.177.223:80 check
+    server web2 34.139.245.214:80 check" >> /etc/haproxy/haproxy.cfg;
 systemctl restart haproxy;
