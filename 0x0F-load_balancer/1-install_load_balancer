@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This is a comment
+
+sudo apt-get update
+sudo apt -y install haproxy
+sudo sed -i "/errorfile 504 /etc/haproxy/errors/504.http/a frontend Local_Server" /etc/haproxy/haproxy.cfg
+sudo sed -i "/frontend Local_Server/a     bind 10.10.255.101:80" /etc/haproxy/haproxy.cfg
