@@ -9,7 +9,6 @@ echo "frontend Local_Server
     default_backend My_Web_Servers
 
 backend My_Web_Servers
-    mode http
     balance roundrobin
     server web1 34.148.177.223:80 check
     server web2 34.139.245.214:80 check" >> /etc/haproxy/haproxy.cfg;
