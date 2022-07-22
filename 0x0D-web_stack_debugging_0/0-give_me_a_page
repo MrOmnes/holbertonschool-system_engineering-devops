@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# Docker For Port 80
-
-service apache2 start
