@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-# Be sure to listen 80 by linking available and enabled
-
-sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-sudo service nginx restart
-
