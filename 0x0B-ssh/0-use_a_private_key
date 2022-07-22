@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# Say what the script doing.
-
-ssh -i ~/.ssh/school ubuntu@34.148.177.223
