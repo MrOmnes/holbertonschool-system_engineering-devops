@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This is a comment
+
+dig www.$1 | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{print "The subdomain www is a " $4 " and point to " $5 }'
+dig lb-01.$1 | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{print "The subdomain lb-01 is a " $4 " and point to " $5 }'
+dig web-01.$1 | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{print "The subdomain web-01 is a " $4 " and point to " $5 }'
+dig web-02.$1 | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{print "The subdomain web-02 is a " $4 " and point to " $5 }'
