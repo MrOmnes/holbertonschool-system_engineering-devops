@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Create SSH Key
+ssh-keygen -f school -N betty
