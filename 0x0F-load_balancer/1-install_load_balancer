@@ -2,14 +2,14 @@
 # Install Nginx
 sudo apt update -y
 sudo apt install haproxy -y
-sudo sed -i "35i"; /etc/haproxy/haproxy.cfg
-sudo sed -i "36i frontend haproxy-main"; /etc/haproxy/haproxy.cfg
-sudo sed -i "37i \tbind *:80"; /etc/haproxy/haproxy.cfg
-sudo sed -i "38i \toption forwardfor"; /etc/haproxy/haproxy.cfg
-sudo sed -i "39i \tdefault_backend apache_webservers"; /etc/haproxy/haproxy.cfg
+sudo sed -i "35i" /etc/haproxy/haproxy.cfg
+sudo sed -i "36i frontend haproxy-main" /etc/haproxy/haproxy.cfg
+sudo sed -i "37i	bind *:80" /etc/haproxy/haproxy.cfg
+sudo sed -i "38i	option forwardfor" /etc/haproxy/haproxy.cfg
+sudo sed -i "39i	default_backend apache_webservers" /etc/haproxy/haproxy.cfg
 sudo sed -i "40i"; /etc/haproxy/haproxy.cfg
-sudo sed -i "41i backend apache_webservers"; /etc/haproxy/haproxy.cfg
-sudo sed -i "42i \tbalance roundrobin"; /etc/haproxy/haproxy.cfg
-sudo sed -i "43i \tserver web-01\t 3.90.206.91 check"; /etc/haproxy/haproxy.cfg
-sudo sed -i "44i \tserver web-02\t 34.235.167.171 check"; /etc/haproxy/haproxy.cfg
+sudo sed -i "41i backend apache_webservers" /etc/haproxy/haproxy.cfg
+sudo sed -i "42i	balance roundrobin" /etc/haproxy/haproxy.cfg
+sudo sed -i "43i	server web-01\t 3.90.206.91 check" /etc/haproxy/haproxy.cfg
+sudo sed -i "44i	server web-02\t 34.235.167.171 check" /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
