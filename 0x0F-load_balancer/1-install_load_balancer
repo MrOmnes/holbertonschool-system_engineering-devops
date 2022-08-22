@@ -10,6 +10,6 @@ echo "	default_backend apache_webservers" | sudo tee -a /etc/haproxy/haproxy.cfg
 echo "" | sudo tee -a /etc/haproxy/haproxy.cfg
 echo "	backend apache_webservers" | sudo tee -a /etc/haproxy/haproxy.cfg
 echo "	balance roundrobin" | sudo tee -a /etc/haproxy/haproxy.cfg
-echo "	server web-01	3.90.206.91 check" | sudo tee -a /etc/haproxy/haproxy.cfg
-echo "	server web-02	34.235.167.171 check" | sudo tee -a /etc/haproxy/haproxy.cfg
+echo "	server web-01	3.90.206.91" | sudo tee -a /etc/haproxy/haproxy.cfg
+echo "	server web-02	34.235.167.171" | sudo tee -a /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
