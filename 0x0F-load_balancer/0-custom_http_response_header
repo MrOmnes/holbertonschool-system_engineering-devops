@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Install Nginx
+sudo apt update -y
+sudo apt install nginx -y
+sudo rm /var/www/html/index.html
+sudo touch /var/www/html/index.html 
+sudo bash -c "echo 'Hello World' > /var/www/html/index.html"
+sudo emacs /etc/nginx/sites-available/default
+sed -i '\tadd_header X-Served-By $HOSTNAME;' /etc/nginx/sites-available/default
+sudo service nginx restart
