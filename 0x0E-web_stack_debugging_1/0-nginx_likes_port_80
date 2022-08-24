@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # This is a comment for requierements
 rm /etc/nginx/sites-enabled/default
-ln -s /etc/nginx/sites-availabe/default /etc/nginx/sites-enabled/default
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo service nginx restart
