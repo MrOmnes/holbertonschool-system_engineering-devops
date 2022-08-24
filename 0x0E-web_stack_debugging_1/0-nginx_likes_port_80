@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # This is a comment for requierements
-sed -i '/	listen 8080 default_server;/c\	listen 80 default_server;' /etc/nginx/sites-enabled/default
-sed -i '/	listen [::]:8080 default_server ipv6only=on;/c\	listen [::]:80 default_server ipv6only=on;' /etc/nginx/sites-enabled/default
+rm /etc/nginx/sites-enabled/default
+ln -s /etc/nginx/sites-availabe/default /etc/nginx/sites-enabled/default
 sudo service nginx restart
