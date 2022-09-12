@@ -18,7 +18,7 @@ if __name__ == "__main__":
         todoCountComplete += 1
     while todoCount < len(todo_url):
         todoCount += 1
-    print("Employee {} is done with tasks ({}/{}):"
+    print("Employee {} is done with tasks({}/{}):"
           .format(name, todoCountComplete, todoCount))
     while i < todoCountComplete:
         print("\t " + todoComplete[i]['title'])
