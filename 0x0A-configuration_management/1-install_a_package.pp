@@ -1,5 +1,5 @@
 #Install package
 
-exec {'sudo gem install puppet-lint -v 2.5.0':
+exec {'sudo gem install flask -v 2.1.0':
     path => ['/usr/bin'],
 }
