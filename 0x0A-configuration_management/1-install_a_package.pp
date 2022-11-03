@@ -1,5 +1,7 @@
 #Install package
 
-exec {'sudo gem install flask -v 2.1.0':
-    path => ['/usr/bin'],
+exec { 'install flask':
+  command => 'pip3 install flask',
+  path    => '/usr/bin',
+  version => '2.1.0',
 }
